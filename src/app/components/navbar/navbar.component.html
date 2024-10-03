@@ -1,0 +1,17 @@
+<nav class="bg-gradient-to-r min-h-[10vh] sm:min-h-[15vh] md:min-h-[20vh] flex justify-center items-center from-purple-600 to-indigo-800 shadow-lg">
+  <div class="w-full max-w-7xl mx-auto px-2 sm:px-4 lg:px-8">
+    <div class="flex justify-center items-center py-2 sm:py-4">
+      <!-- Menu items -->
+      <div class="flex flex-wrap justify-center items-center gap-2 sm:gap-4">
+        <ng-container *ngFor="let item of navItems">
+          <a (click)="scrollToSection(item.path)" 
+             class="px-2 sm:px-3 py-1 sm:py-2 rounded-md text-xs sm:text-sm md:text-base font-medium text-indigo-100 hover:bg-indigo-700 hover:text-white transition duration-300 cursor-pointer">
+            {{ item.label }}
+          </a>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
