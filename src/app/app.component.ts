@@ -7,11 +7,12 @@ import { AboutMeComponent } from './components/about-me/about-me.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { ScrollService } from './services/scroll.service';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
-
+import { SkillsComponent } from './components/skills/skills.component';
+import { BlogComponent } from './components/blog/blog.component';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NavbarComponent, FooterComponent, HomeLandingSectionComponent, AboutMeComponent, ProjectsComponent, ContactUsComponent],
+  imports: [RouterOutlet, NavbarComponent, FooterComponent, HomeLandingSectionComponent, AboutMeComponent, ProjectsComponent, ContactUsComponent, SkillsComponent, BlogComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

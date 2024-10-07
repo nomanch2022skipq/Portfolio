@@ -13,14 +13,16 @@ interface NavItem {
   standalone: true,
   imports: [CommonModule],
   templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.css']
+  styleUrls: ['./navbar.component.css'],
 })
 export class NavbarComponent implements OnInit, OnDestroy {
   navItems: NavItem[] = [
     { label: 'Home', path: 'home' },
     { label: 'About', path: 'about' },
+    { label: 'Skills', path: 'skills' },
+    { label: 'Blog', path: 'blog' },
     { label: 'Projects', path: 'projects' },
-    { label: 'Contact', path: 'contact' }
+    { label: 'Contact', path: 'contact' },
   ];
 
   activeSection: string = '';
@@ -30,7 +32,7 @@ export class NavbarComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.subscription = this.scrollService.activeSection$.subscribe(
-      section => this.activeSection = section
+      (section) => (this.activeSection = section)
     );
   }
 
